@@ -20,6 +20,9 @@
 $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, build/target/product/embedded.mk)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=sdm660
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := whyred
 PRODUCT_NAME := omni_whyred
