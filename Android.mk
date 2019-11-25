@@ -16,22 +16,12 @@
 # limitations under the License.
 #
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, build/target/product/embedded.mk)
+LOCAL_PATH := $(call my-dir)
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.keystore=sdm660 \
-    ro.vendor.build.security_patch=2099-12-31
+ifeq ($(TARGET_DEVICE),whyred)
 
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.bootimage.build.date.utc \
-    ro.build.date.utc
+include $(call all-makefiles-under,$(LOCAL_PATH))
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := whyred
-PRODUCT_NAME := omni_whyred
-PRODUCT_BRAND := xiaomi
-PRODUCT_MODEL := Xiaomi Redmi Note 5
-PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_RELEASE_NAME := Xiaomi Redmi Note 5
+include $(CLEAR_VARS)
+
+endif
