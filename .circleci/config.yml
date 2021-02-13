@@ -1,0 +1,19 @@
+version: 2.1
+jobs:
+  compile:
+   docker:
+      - image: fr3akyphantom/droid-builder:latest
+   steps:
+      - run:
+          command: |
+           apt update && apt install ccache
+           git config --global user.name "ItsVixano"
+           git config --global user.email "vixanonew@gmail.com"
+           git config --global color.ui false
+           wget https://raw.githubusercontent.com/ItsVixano/android_device_xiaomi_whyred_twrp/android-9.0/.circleci/twrp_ci.sh
+           source twrp_ci.sh
+workflows:
+  version: 2.1
+  cooking:
+    jobs:
+      - compile
