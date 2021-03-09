@@ -122,3 +122,7 @@ TW_USE_TOOLBOX := true
 
 # For ci only
 TW_DEVICE_VERSION := 1
+
+# DNM
+TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
