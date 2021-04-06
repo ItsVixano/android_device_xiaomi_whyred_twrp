@@ -22,7 +22,9 @@ $(call inherit-product, build/target/product/embedded.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=sdm660 \
-    ro.vendor.build.security_patch=2099-12-31
+    ro.vendor.build.security_patch=2099-12-31 \
+    ro.bootimage.build.date.utc=1514797200 \
+    ro.build.date.utc=1514797200
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.bootimage.build.date.utc \
