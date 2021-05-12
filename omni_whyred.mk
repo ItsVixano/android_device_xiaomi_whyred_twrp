@@ -21,7 +21,9 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, build/target/product/embedded.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.treble.enabled=true \
     ro.hardware.keystore=sdm660 \
+    ro.hardware.gatekeeper=sdm660 \
     ro.vendor.build.security_patch=2099-12-31 \
     ro.bootimage.build.date.utc=1514797200 \
     ro.build.date.utc=1514797200
