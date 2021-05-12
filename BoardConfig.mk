@@ -96,16 +96,12 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libicuuc \
     libxml2 \
     libion \
-    libasyncio \
-    libext2_misc \
     android.hidl.base@1.0
 
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libasyncio.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libext2_misc.so \
     $(TARGET_OUT)/lib64/android.hidl.base@1.0.so
 
 # TWRP Configuration
